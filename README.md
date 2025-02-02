@@ -1,16 +1,17 @@
-# flutter_application_1
+# flutter_business_manager
 
-A new Flutter project.
+A Flutter project.
 
-## Getting Started
+## User_Entity
 
-This project is a starting point for a Flutter application.
+Este arquivo define a entidade User dentro do domínio da aplicação. Ele utiliza o pacote Freezed para facilitar a criação de classes imutáveis e json_serializable para permitir a conversão entre objetos Dart e JSON.
 
-A few resources to get you started if this is your first Flutter project:
+## 📌 Funcionalidade
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+A entidade User é uma classe selada que representa diferentes estados do usuário no sistema. Ela pode assumir três formas:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+User: Representa um usuário comum com ID, nome e e-mail.
+
+User.notLogged(): Representa um usuário que ainda não está autenticado.
+
+User.logged(...): Representa um usuário autenticado, incluindo tokens para autenticação.
