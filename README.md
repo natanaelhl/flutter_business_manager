@@ -10,7 +10,7 @@ Este arquivo define a entidade User dentro do domínio da aplicação. Ele utili
 
 A entidade User é uma classe selada que representa diferentes estados do usuário no sistema. Ela pode assumir três formas:
 
-- User: Representa um usuário comum com ID, nome e e-mail.
+- **User:** Representa um usuário comum com ID, nome e e-mail.
 
 - User.notLogged(): Representa um usuário que ainda não está autenticado.
 
