@@ -12,6 +12,11 @@ A entidade User é uma classe selada que representa diferentes estados do usuár
 
 - **User:** Representa um usuário comum com ID, nome e e-mail.
 
-- User.notLogged(): Representa um usuário que ainda não está autenticado.
+- **User.notLogged():** Representa um usuário que ainda não está autenticado.
 
-- User.logged(...): Representa um usuário autenticado, incluindo tokens para autenticação.
+- **User.logged(...):** Representa um usuário autenticado, incluindo tokens para autenticação.
+
+## 📜 Código da Entidade
+
+![Trecho de código Flutter](README/imagens/user_entity.png)
+
