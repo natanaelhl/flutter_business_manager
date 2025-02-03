@@ -14,9 +14,18 @@ The User entity is a sealed class that represents different user states within t
 
 ## 📜 Entity Code
 
-# 📜 Entity Code
-
 <div>
   <img src="https://github.com/user-attachments/assets/c6508263-2552-4e77-84bc-8f5fdd389dd1" width="500px">
 </div>
+
+## SignInDto
+The SignInDto class is a Data Transfer Object (DTO) used to store and transfer user login data (email and password) within the application.
+
+## 📜 DTO Code
+
+<div>
+  ![Image](https://github.com/user-attachments/assets/fa78a44b-1157-4a99-9fc2-8b1505a37978)
+</div>
+
+
 
