@@ -24,7 +24,7 @@ The SignInDto class is a Data Transfer Object (DTO) used to store and transfer u
 ## 📜 DTO Code
 
 <div>
-  <img src="https://github.com/user-attachments/assets/fa78a44b-1157-4a99-9fc2-8b1505a37978">
+  <img src="https://github.com/user-attachments/assets/fa78a44b-1157-4a99-9fc2-8b1505a37978" width="500px">
 </div>
 
 
