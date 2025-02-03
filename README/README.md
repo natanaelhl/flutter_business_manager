@@ -18,5 +18,7 @@ A entidade User é uma classe selada que representa diferentes estados do usuár
 
 ## 📜 Código da Entidade
 
-![Trecho de código Flutter](README/imagens/user_entity.png)
+<div>
+  <img src="https://github.com/user-attachments/assets/c6508263-2552-4e77-84bc-8f5fdd389dd1" width="500px">
+</div>
 
