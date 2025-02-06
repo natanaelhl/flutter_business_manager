@@ -1,4 +1,5 @@
 # Domain
+The Domain layer is responsible for defining the core business logic of the application. It contains entities, use cases, and Data Transfer Objects (DTOs) to ensure a clear separation of concerns.
 
 ## User_Entity
 
