@@ -1,8 +1,8 @@
 # Domain  
 The Domain layer is responsible for defining the core business logic of the application. It contains entities, use cases, and Data Transfer Objects (DTOs) to ensure a clear separation of concerns.  
 
-## 📌 User Entity  
-
+## 📌 Entities  
+### User Entity
 This file defines the `User` entity within the application's domain. It uses the **Freezed** package to simplify the creation of immutable classes and **json_serializable** to enable conversion between Dart objects and JSON.  
 
 The `User` entity is a sealed class that represents different user states within the system. It can take three forms:  
