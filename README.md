@@ -1,3 +1,5 @@
+# Domain
+
 ## User_Entity
 
 This file defines the User entity within the application's domain. It uses the Freezed package to simplify the creation of immutable classes and json_serializable to enable conversion between Dart objects and JSON.
