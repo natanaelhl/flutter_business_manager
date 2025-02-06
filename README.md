@@ -18,7 +18,7 @@ Below is the implementation of the `User` entity:
   <img src="https://github.com/user-attachments/assets/c6508263-2552-4e77-84bc-8f5fdd389dd1" width="500px">  
 </div>  
 
-## 📌 SignInDto  
+### 📌 SignInDto  
 
 The `SignInDto` class is a **Data Transfer Object (DTO)** used to store and transfer user login data (email and password) within the application. It is commonly used in authentication flows to encapsulate credentials before sending them to an API or authentication service.  
 
@@ -27,4 +27,6 @@ Below is the implementation of the `SignInDto` class:
 
 <div>  
   <img src="https://github.com/user-attachments/assets/fa78a44b-1157-4a99-9fc2-8b1505a37978" width="500px">  
-</div>  
+</div>
+
+## 
