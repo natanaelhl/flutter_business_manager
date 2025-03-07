@@ -13,6 +13,7 @@ class RemoteAuthRepository implements AuthRepository {
   final AuthLocalStorage _authLocalStorage;
   final AuthClientHttp _authClientHttp;
   final _streamController = StreamController<User>.broadcast();
+  
 
   RemoteAuthRepository(this._authLocalStorage, this._authClientHttp);
 
@@ -38,6 +39,7 @@ class RemoteAuthRepository implements AuthRepository {
         .removeUser()
         .onSuccess((_) => _streamController.add(const NotLoggedUser()));
   }
+
 
   @override
   Stream<User> userObserver() {

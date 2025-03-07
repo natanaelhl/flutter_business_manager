@@ -13,6 +13,11 @@ List<RouteEntity> get routes => [
         uri: Uri.parse('/auth/login'),
         routeBuilder: b1Builder,
       ),
+      RouteEntity(
+        key: '/splash',
+        uri: Uri.parse('/splash'),
+        routeBuilder: b2Builder,
+      ),
     ];
 
 const routePaths = (
@@ -22,4 +27,5 @@ const routePaths = (
     path: '/auth',
     login: '/auth/login',
   ),
+  splash: '/splash',
 );

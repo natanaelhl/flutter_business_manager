@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/config/dependences.dart';
+import 'package:flutter_application_1/domain/dtos/credentials.dart';
+import 'package:flutter_application_1/domain/validators/credentials_validator.dart';
 import 'package:flutter_application_1/main.dart';
-import 'package:flutter_application_1/ui/auth/login_viewmodel.dart';
+import 'package:flutter_application_1/ui/auth/viewmodels/login_viewmodel.dart';
 import 'package:result_command/result_command.dart';
 import 'package:routefly/routefly.dart';
 
@@ -14,6 +16,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
   final viewmodel = injector.get<LoginViewmodel>();
+  final validator = CredentialsValidator();
+  final credentials = Credentials();
 
   @override
   void initState() {
@@ -56,6 +60,9 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               TextFormField(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                onChanged: credentials.setEmail,
+                validator: validator.byField(credentials, 'email'),
                 decoration: const InputDecoration(
                     labelText: 'Email', border: OutlineInputBorder()),
               ),
@@ -63,15 +70,29 @@ class _LoginPageState extends State<LoginPage> {
                 height: 20,
               ),
               TextFormField(
+                autovalidateMode: AutovalidateMode.onUserInteraction,
+                onChanged: credentials.setPassword,
+                validator: validator.byField(credentials, 'password'),
                 decoration: const InputDecoration(
                     labelText: 'Password', border: OutlineInputBorder()),
               ),
               const SizedBox(
                 height: 20,
               ),
-              ElevatedButton(
-                onPressed: () {},
-                child: const Text('Login'),
+              ListenableBuilder(
+                listenable: viewmodel.loginCommand,
+                builder: (context, _) {
+                  return ElevatedButton(
+                    onPressed: viewmodel.loginCommand.isRunning
+                        ? null
+                        : () {
+                            if (validator.validate(credentials).isValid) {
+                              viewmodel.loginCommand.execute(credentials);
+                            }
+                          },
+                    child: const Text('Login'),
+                  );
+                },
               ),
             ],
           ),
